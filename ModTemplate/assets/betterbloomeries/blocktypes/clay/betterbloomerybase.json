@@ -1,0 +1,220 @@
+{
+  "code": "betterbloomerybase",
+  "class": "BetterBlockBloomery",
+  "entityClass": "Bloomery",
+  "behaviors": [ { "name": "HorizontalOrientable" } ],
+  "attributes": {
+    "handbook": {
+      "groupBy": [ "betterbloomeries-*" ]
+    }
+  },
+  "variantgroups": [
+    {
+      "code": "tier",
+      "states": [ "tier1", "tier2", "tier3" ]
+    },
+    {
+      "code": "side",
+      "loadfromproperties": "abstract/horizontalorientation"
+    }
+  ],
+  "shape": { "base": "game:block/clay/bloomery/base" },
+  "blockmaterial": "Ceramic",
+  "creativeinventory": {
+    "general": [ "*-north" ],
+    "construction": [ "*-north" ],
+    "betterbloomeries": [ "*-north" ]
+  },
+  "replaceable": 400,
+  "resistance": 2,
+  "maxStackSize": 1,
+  "lightAbsorption": 99,
+  "textureWidht": 32,
+  "textureHeight": 32,
+  "textures": {
+    "all": { "base": "block/clay/{tier}/base" }
+  },
+  "shapeByType": {
+    "*-north": {
+      "base": "game:block/clay/bloomery/base",
+      "rotateY": 0
+    },
+    "*-east": {
+      "base": "game:block/clay/bloomery/base",
+      "rotateY": 270
+    },
+    "*-south": {
+      "base": "game:block/clay/bloomery/base",
+      "rotateY": 180
+    },
+    "*-west": {
+      "base": "game:block/clay/bloomery/base",
+      "rotateY": 90
+    }
+  },
+  "sounds": {
+    "walk": "game:walk/stone",
+    "byTool": {
+      "Pickaxe": {
+        "hit": "game:block/rock-hit-pickaxe",
+        "break": "game:block/rock-break-pickaxe"
+      }
+    }
+  },
+  "collisionboxes": [
+    {
+      "x1": 0,
+      "y1": 0.25,
+      "z1": 0,
+      "x2": 1,
+      "y2": 1,
+      "z2": 1
+    },
+    {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0.25,
+      "x2": 1,
+      "y2": 0.25,
+      "z2": 1,
+      "rotateYByType": {
+        "*-north": 180,
+        "*-east": 90,
+        "*-west": 270
+      }
+    },
+    {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0,
+      "x2": 0.375,
+      "y2": 0.25,
+      "z2": 0.25,
+      "rotateYByType": {
+        "*-north": 180,
+        "*-east": 90,
+        "*-west": 270
+      }
+    },
+    {
+      "x1": 0.625,
+      "y1": 0,
+      "z1": 0,
+      "x2": 1,
+      "y2": 0.25,
+      "z2": 0.25,
+      "rotateYByType": {
+        "*-north": 180,
+        "*-east": 90,
+        "*-west": 270
+      }
+    }
+  ],
+  "selectionbox": {
+    "x1": 0,
+    "y1": 0,
+    "z1": 0,
+    "x2": 1,
+    "y2": 1,
+    "z2": 1
+  },
+  "sideopaqueByType": {
+    "*-north": {
+      "down": false,
+      "up": false,
+      "horizontals": true,
+      "north": false
+    },
+    "*-east": {
+      "down": false,
+      "up": false,
+      "horizontals": true,
+      "east": false
+    },
+    "*-south": {
+      "down": false,
+      "up": false,
+      "horizontals": true,
+      "south": false
+    },
+    "*-west": {
+      "down": false,
+      "up": false,
+      "horizontals": true,
+      "west": false
+    }
+  },
+  "sidesolidByType": {
+    "*-north": {
+      "all": false,
+      "east": true,
+      "north": true,
+      "west": true
+    },
+    "*-east": {
+      "all": false,
+      "north": true,
+      "south": true,
+      "east": true
+    },
+    "*-south": {
+      "all": false,
+      "east": true,
+      "south": true,
+      "west": true
+    },
+    "*-west": {
+      "all": false,
+      "west": true,
+      "south": true,
+      "north": true
+    }
+  },
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.2,
+      "y": -1.1,
+      "z": -0.8
+    },
+    "rotation": {
+      "x": -2,
+      "y": 25,
+      "z": -78
+    },
+    "scale": 0.37
+  },
+  "dropsByType": {
+    "*-tier1-*": [
+      {
+        "type": "item",
+        "code": "game:refractorybrick-fired-tier1",
+        "quantity": {
+          "avg": 7,
+          "var": 1
+        }
+      }
+    ],
+    "*-tier2-*": [
+      {
+        "type": "item",
+        "code": "game:refractorybrick-fired-tier2",
+        "quantity": {
+          "avg": 7.5,
+          "var": 0.5
+        }
+      }
+    ],
+    "*-tier3-*": [
+      {
+        "type": "item",
+        "code": "game:refractorybrick-fired-tier3",
+        "quantity": {
+          "avg": 8,
+          "var": 0
+        }
+      }
+    ]
+  }
+}

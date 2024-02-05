@@ -1,0 +1,18 @@
+{
+  "ingredientPattern": "BBB,BBB,B_B",
+  "ingredients": {
+    "B": {
+      "type": "item",
+      "code": "game:refractorybrick-fired-*",
+      "name": "type",
+      "allowedVariants": ["tier1", "tier2", "tier3"]
+    }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+    "type": "block",
+    "code": "betterbloomerybase-{type}-north",
+    "quantity": 1
+  }
+}

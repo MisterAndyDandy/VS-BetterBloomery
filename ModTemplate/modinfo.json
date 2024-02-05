@@ -1,0 +1,11 @@
+{
+  "type": "code",
+  "modid": "betterbloomeriesreborn",
+  "name": "BetterBloomeries : ReBorn",
+  "authors": [ "SturgeonFish", "MisterAndyDandy" ],
+  "description": "Tiered bloomeries to match steel furnaces",
+  "version": "1.0.5",
+  "dependencies": {
+    "game": "1.19.0"
+  }
+}
